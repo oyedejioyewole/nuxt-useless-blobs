@@ -6,8 +6,8 @@
 
 Just a simple integration for `useless-blobs` in Nuxt
 
-- [✨ &nbsp;Release Notes](/CHANGELOG.md)
-- [🏀 Online playground](https://stackblitz.com/github/your-org/nuxt-useless-blobs?file=playground%2Fapp.vue)
+- [✨ Release Notes](/CHANGELOG.md)
+- [🏀 Online playground](https://stackblitz.com/edit/nuxt-useless-blobs?file=playground%2Fapp.vue)
 - [📖 Documentation](https://github.com/jbukuts/useless-blobs/tree/main)
 
 ## Features
