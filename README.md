@@ -12,7 +12,7 @@ Just a simple integration for `useless-blobs` in Nuxt
 
 ## Features
 
-- <`UselessBlob` /> &mdash; this renders the blob
+- A <`UselessBlob` /> component &mdash; this renders the blob
 
 ## Quick Setup
 
@@ -39,26 +39,39 @@ export default defineNuxtConfig({
 
 That's it! You can now use `nuxt-useless-blobs` in your Nuxt app ✨
 
+## Usage
+
+This module exposes a `<UselessBlob />` component that you can use in your Nuxt app.
+
+```vue
+<template>
+  <!-- This uses the default values -->
+  <UselessBlob />
+</template>
+```
+
+**Note:** This also accepts props, for more information refer to the component types or [here](https://github.com/jbukuts/useless-blobs/tree/main)
+
 ## Development
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Generate type stubs
-npm run dev:prepare
+pnpm dev:prepare
 
 # Develop with the playground
-npm run dev
+pnpm dev
 
 # Build the playground
-npm run dev:build
+pnpm dev:build
 
 # Run ESLint
-npm run lint
+pnpm lint
 
 # Release new version
-npm run release
+pnpm release
 ```
 
 <!-- Badges -->
