@@ -1,10 +1,10 @@
 <template>
   <div>
     <p>This is a blob</p>
-    <UselessBlob style="width: 50%; height: 50%" />
+    <UselessBlob />
 
     <p>and a rotating blob</p>
-    <UselessBlob style="width: 50%; height: 50%" class="rotating" />
+    <UselessBlob :width="50" :height="50" class="rotating" />
   </div>
 </template>
 
