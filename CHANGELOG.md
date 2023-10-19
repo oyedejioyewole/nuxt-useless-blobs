@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.0.2
+
+[compare changes](https://github.com/OyewoleOyedeji/nuxt-useless-blobs/compare/v1.0.1...v1.0.2)
+
+### 🏡 Chore
+
+- **dependencies:** Bumped @nuxt/kit to 3.7.4 ([211842a](https://github.com/OyewoleOyedeji/nuxt-useless-blobs/commit/211842a))
+
+### ❤️ Contributors
+
+- OyewoleOyedeji
+
 ## v1.0.1
 
 [compare changes](https://github.com/OyewoleOyedeji/nuxt-useless-blobs/compare/v1.0.0...v1.0.1)
