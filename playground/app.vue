@@ -4,7 +4,11 @@
     <UselessBlob />
 
     <p>and a rotating blob</p>
-    <UselessBlob :width="50" :height="50" class="rotating" />
+    <UselessBlob
+      :width="50"
+      :height="50"
+      class="rotating"
+    />
   </div>
 </template>
 
