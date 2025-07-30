@@ -1,42 +1,58 @@
 {
   "name": "nuxt-useless-blobs",
   "version": "1.0.2",
-  "description": "Just a simple integration for useless-blobs in Nuxt",
-  "repository": "https://github.com/OyewoleOyedeji/nuxt-useless-blobs",
+  "description": "An easier way of using useless-blobs in your Nuxt project!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oyedejioyewole/nuxt-useless-blobs.git"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/types.d.ts",
-      "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
+      "types": "./dist/types.d.mts",
+      "import": "./dist/module.mjs"
     }
   },
-  "main": "./dist/module.cjs",
-  "types": "./dist/types.d.ts",
+  "main": "./dist/module.mjs",
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/types.d.mts"
+      ]
+    }
+  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "prepack": "nuxt-module-build",
-    "dev": "nuxi dev playground",
-    "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
-    "release": "npm run lint && npm run prepack && changelogen --release && git push --follow-tags",
-    "lint": "eslint . --fix"
+    "dev": "pnpm --filter docs dev",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare docs",
+    "lint": "eslint . --fix",
+    "prepack": "nuxt-module-build build",
+    "release": "pnpm test && && changelogen --no-output --push --release",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:types": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.7.4",
+    "change-case": "^5.4.4",
+    "defu": "^6.1.4",
     "useless-blobs": "^1.1.4"
   },
   "devDependencies": {
-    "@nuxt/devtools": "1.0.0",
-    "@nuxt/eslint-config": "^0.2.0",
-    "@nuxt/module-builder": "^0.5.2",
-    "@nuxt/schema": "^3.7.4",
-    "@types/node": "^20.8.7",
-    "changelogen": "^0.5.5",
-    "eslint": "^8.51.0",
-    "nuxt": "^3.7.4"
+    "@nuxt/devtools": "2.6.2",
+    "@nuxt/eslint-config": "^1.7.1",
+    "@nuxt/kit": "^4.0.2",
+    "@nuxt/module-builder": "^1.0.2",
+    "@nuxt/schema": "^4.0.2",
+    "@nuxt/test-utils": "^3.19.2",
+    "@types/node": "^24.1.0",
+    "changelogen": "^0.6.2",
+    "eslint": "^9.32.0",
+    "nuxt": "^4.0.2",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4",
+    "vue-tsc": "^3.0.4"
   }
 }
