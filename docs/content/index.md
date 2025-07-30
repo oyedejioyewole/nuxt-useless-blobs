@@ -20,7 +20,7 @@ I want to read about the
 
 #tab-1
 ```vue
-<UselessBlobs />
+<UselessBlob />
 ````
 
 You can use the props below to customize how the blob should look
@@ -29,7 +29,7 @@ You can use the props below to customize how the blob should look
 
 #tab-1
 ```vue
-<UselessBlobs boundingShape="rectangle" />
+<UselessBlob boundingShape="rectangle" />
 ```
 
 **Default:** `ellipsis`
@@ -38,7 +38,7 @@ Defines the shape where the blob's path would be confined to.
 
 #tab-2
 ```vue
-<UselessBlobs :height="300" />
+<UselessBlob :height="300" />
 ```
 
 **Default:** `200`
@@ -47,7 +47,7 @@ Defines the internal height of the blob path and sets the `viewBox` height.
 
 #tab-3
 ```vue
-<UselessBlobs :irregularity="0.3" />
+<UselessBlob :irregularity="0.3" />
 ```
 
 **Default:** `0.25`
@@ -56,7 +56,7 @@ Defines the deviation between angles of each point.
 
 #tab-4
 ```vue
-<UselessBlobs :smoothing="0.5" />
+<UselessBlob :smoothing="0.5" />
 ```
 
 **Default:** `1`
@@ -65,7 +65,7 @@ Defines how rough the final curve of the blob would be.
 
 #tab-5
 ```vue
-<UselessBlobs :spikiness="0.3" />
+<UselessBlob :spikiness="0.3" />
 ```
 
 **Default:** `0.5`
@@ -74,7 +74,7 @@ Defines how much a point deviates away from the bounding shape
 
 #tab-6
 ```vue
-<UselessBlobs :verts="10" />
+<UselessBlob :verts="10" />
 ```
 
 **Default:** `6`
@@ -83,7 +83,7 @@ Defines the number of vertices the resulting blob shape would have
 
 #tab-7
 ```vue
-<UselessBlobs :width="300" />
+<UselessBlob :width="300" />
 ```
 
 **Default:** `200`

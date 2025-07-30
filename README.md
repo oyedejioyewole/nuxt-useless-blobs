@@ -4,75 +4,54 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-Just a simple integration for `useless-blobs` in Nuxt
+An easier way of using [useless-blobs](https://jbukuts.github.io/useless-blobs/) in your [Nuxt](https://nuxt.com) project!
 
-- [✨ Release Notes](/CHANGELOG.md)
 - [🏀 Online playground](https://stackblitz.com/edit/nuxt-useless-blobs?file=playground%2Fapp.vue)
-- [📖 Documentation](https://github.com/jbukuts/useless-blobs/tree/main)
+- [📖 Documentation](https://nuxt-useless-blobs.vercel.app)
 
-## Features
+## Setup
 
-- A <`UselessBlob` /> component &mdash; this renders the blob
-
-## Quick Setup
-
-1. Add `nuxt-useless-blobs` dependency to your project
+Run the following command to install and add the module to your project:
 
 ```bash
-# Using pnpm
-pnpm add -D nuxt-useless-blobs
-
-# Using yarn
-yarn add --dev nuxt-useless-blobs
-
-# Using npm
-npm install --save-dev nuxt-useless-blobs
+npx nuxi@latest module add nuxt-bootstrap-icons
 ```
 
-2. Add `nuxt-useless-blobs` to the `modules` section of `nuxt.config.ts`
-
-```js
-export default defineNuxtConfig({
-  modules: ["nuxt-useless-blobs"],
-});
-```
-
-That's it! You can now use `nuxt-useless-blobs` in your Nuxt app ✨
+That's it! You can now use `nuxt-bootstrap-icons` in your Nuxt app ✨
 
 ## Usage
 
 This module exposes a `<UselessBlob />` component that you can use in your Nuxt app.
 
 ```vue
-<template>
-  <!-- This uses the default values -->
-  <UselessBlob />
-</template>
+<UselessBlob />
 ```
 
-**Note:** This also accepts props, for more information refer to the component types or [here](https://github.com/jbukuts/useless-blobs/tree/main)
+For more usage information, view [here](https;//nuxt-useless-blobs.vercel.app)
 
-## Development
+## Resources
 
-```bash
-# Install dependencies
-pnpm install
+1. **Documentation**: <https://nuxt-useless-blobs.vercel.app>
+2. **useless-blobs Author's example**: <https://jbukuts.github.io/useless-blobs>
 
-# Generate type stubs
-pnpm dev:prepare
+## Contributing
 
-# Develop with the playground
-pnpm dev
+You can contribute to this module with StackBlitz:
 
-# Build the playground
-pnpm dev:build
+[![Edit oyedejioyewole/nuxt-useless-blobs/main][playground-src]][playground-href]
 
-# Run ESLint
-pnpm lint
+or locally:
 
-# Release new version
-pnpm release
-```
+### Documentation
+
+1. Clone the repository
+2. Install dependencies with `pnpm install`
+3. Setup module for development with `pnpm dev:prepare`
+4. Run development server with `pnpm dev`
+
+**Note:** Hosted on Vercel
+
+[![Deploy with Vercel][vercel-src]][vercel-href]
 
 <!-- Badges -->
 
@@ -82,3 +61,7 @@ pnpm release
 [npm-downloads-href]: https://npmjs.com/package/nuxt-useless-blobs
 [nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
 [nuxt-href]: https://nuxt.com
+[playground-src]: https://developer.stackblitz.com/img/open_in_stackblitz.svg
+[playground-href]: https://stackblitz.com/~/github.com/oyedejioyewole/nuxt-useless-blobs
+[vercel-src]: https://vercel.com/button
+[vercel-href]: https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Foyedejioyewole%2Fnuxt-useless-blobs
