@@ -14,10 +14,10 @@ An easier way of using [useless-blobs](https://jbukuts.github.io/useless-blobs/)
 Run the following command to install and add the module to your project:
 
 ```bash
-npx nuxi@latest module add nuxt-bootstrap-icons
+npx nuxi@latest module add nuxt-useless-blobs
 ```
 
-That's it! You can now use `nuxt-bootstrap-icons` in your Nuxt app ✨
+That's it! You can now use `nuxt-useless-blobs` in your Nuxt app ✨
 
 ## Usage
 
