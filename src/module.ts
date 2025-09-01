@@ -4,11 +4,11 @@ import { kebabCase } from 'change-case'
 // Module options TypeScript interface definition
 export interface ModuleOptions {
   /**
-   * This key allows you to set the prefix for the component registered by the module.
+   * This key changes the name of the runtime component.
    *
-   * @default "useless-blobs"
+   * @default "useless-blob"
    */
-  prefix: string
+  componentName: string
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -19,13 +19,13 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt: '>=3.0.0',
     },
   },
-  defaults: { prefix: 'useless-blobs' },
+  defaults: { componentName: 'useless-blob' },
   setup: (options, nuxt) => {
     const { resolve } = createResolver(import.meta.url)
 
     addComponent({
       filePath: resolve('./runtime/components/UselessBlob.vue'),
-      name: kebabCase(options.prefix),
+      name: kebabCase(options.componentName),
     })
 
     addImportsSources({

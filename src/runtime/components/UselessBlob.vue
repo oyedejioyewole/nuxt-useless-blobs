@@ -9,6 +9,7 @@ const { mergedOptions, path } = useGenerateBlobPath(options)
 
 <template>
   <svg
+    fill="currentColor"
     overflow="visible"
     :viewBox="`0 0 ${mergedOptions.width} ${mergedOptions.height}`"
   >

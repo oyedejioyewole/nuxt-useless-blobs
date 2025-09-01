@@ -1,5 +1,7 @@
 ---
-title: Documentation
+title: Get started
+description: This page would guide you through using this module.
+displayToc: true
 ---
 
 ## Setup
@@ -166,13 +168,13 @@ You can configure the module using the `uselessBlobs` key in the `nuxt.config`
 
 Select a key from the options below to see details specific to such key
 
-::UiTabs{:tabs='["prefix"]'}
+::UiTabs{:tabs='["componentName"]'}
 
 #tab-1
 ```ts [nuxt.config]
 export default defineNuxtConfig({
-  phosphor: {
-    prefix: "blob",
+  uselessBlobs: {
+    componentName: "blob",
   },
 });
 ```
