@@ -9,7 +9,7 @@ useSeoMeta({
 
 <template>
   <main>
-    <AppHeader>
+    <AppHeader right-slot-classes="place-self-center">
       <template #aside>
         <MorphingBlob class="size-100 blur-lg" />
       </template>
