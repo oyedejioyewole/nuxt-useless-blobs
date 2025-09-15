@@ -6,7 +6,12 @@ export default defineAppConfig({
       'Minimum compatibility with Nuxt 3.',
       'Helpful composables for creating blobs.',
     ],
-
+    footer: {
+      content: 'Made with :heart: by [oyedejioyewole](https://github.com/oyedejioyewole)',
+      iconLinks: {
+        'github-logo': 'https://github.com/oyedejioyewole',
+      },
+    },
     headline: 'Create beautiful blobs in your project!',
     repo: 'oyedejioyewole/nuxt-useless-blobs',
     themeColor: '#634c25',

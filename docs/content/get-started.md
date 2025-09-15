@@ -1,8 +1,10 @@
 ---
-title: Get started
-description: This page would guide you through using this module.
 displayToc: true
 ---
+
+# Get started
+
+This page would guide you through using this module.
 
 ## Setup
 
@@ -16,20 +18,22 @@ You have successfully add the module to your project, congratulations 🎉
 
 ## Usage
 
-I want to read about the
+I want to read about the:
 
 ::UiTabs{:tabs='["component", "composable"]'}
 
 #tab-1
+
 ```vue
 <UselessBlob />
-````
+```
 
 You can use the props below to customize how the blob should look
 
 ::UiTabs{:tabs='["boundingShape", "height", "irregularity", "smoothing", "spikiness", "verts", "width"]'}
 
 #tab-1
+
 ```vue
 <UselessBlob boundingShape="rectangle" />
 ```
@@ -39,6 +43,7 @@ You can use the props below to customize how the blob should look
 Defines the shape where the blob's path would be confined to.
 
 #tab-2
+
 ```vue
 <UselessBlob :height="300" />
 ```
@@ -48,6 +53,7 @@ Defines the shape where the blob's path would be confined to.
 Defines the internal height of the blob path and sets the `viewBox` height.
 
 #tab-3
+
 ```vue
 <UselessBlob :irregularity="0.3" />
 ```
@@ -57,6 +63,7 @@ Defines the internal height of the blob path and sets the `viewBox` height.
 Defines the deviation between angles of each point.
 
 #tab-4
+
 ```vue
 <UselessBlob :smoothing="0.5" />
 ```
@@ -66,6 +73,7 @@ Defines the deviation between angles of each point.
 Defines how rough the final curve of the blob would be.
 
 #tab-5
+
 ```vue
 <UselessBlob :spikiness="0.3" />
 ```
@@ -75,6 +83,7 @@ Defines how rough the final curve of the blob would be.
 Defines how much a point deviates away from the bounding shape
 
 #tab-6
+
 ```vue
 <UselessBlob :verts="10" />
 ```
@@ -84,6 +93,7 @@ Defines how much a point deviates away from the bounding shape
 Defines the number of vertices the resulting blob shape would have
 
 #tab-7
+
 ```vue
 <UselessBlob :width="300" />
 ```
@@ -99,8 +109,9 @@ This module exports the following functions:
 ::UiTabs{:tabs='["useCreatePolygon", "useGenerateBlobPath", "useGeneratePathString"]'}
 
 #tab-1
+
 ```ts
-useCreatePolygon(options)
+useCreatePolygon(options);
 ```
 
 This function returns a 2-dimensional array of points which make up a polygon.
@@ -109,18 +120,22 @@ Below is a code snippet using this composable:
 
 ```vue [YourComponent]
 <script lang="ts" setup>
-const { mergedOptions, polygon, refreshFn } = useCreatePolygon({...options, irregularity: 0.2})
+const { mergedOptions, polygon, refresh } = useCreatePolygon({
+  ...options,
+  irregularity: 0.2,
+});
 
-console.log(mergedOptions.value) // Options merged with defaults
-console.log(polygon.value) // [ [1, 1], [2, 2], [3, 3] ]
+console.log(mergedOptions.value); // Options merged with defaults
+console.log(polygon.value); // [ [1, 1], [2, 2], [3, 3] ]
 
-refreshFn() // refreshes the polygon Ref<>
+refresh(); // refreshes the polygon Ref<>
 </script>
 ```
 
 #tab-2
+
 ```ts
-useGenerateBlobPath(options)
+useGenerateBlobPath(options);
 ```
 
 This function returns a `d` attribute of a random blob shape
@@ -129,12 +144,15 @@ Below is a code snippet using this composable:
 
 ```vue [YourComponent]
 <script lang="ts" setup>
-const { mergedOptions, dAttribute, refreshFn } = useGenerateBlobPath({...options, spikiness: 0.2})
+const { mergedOptions, path, refresh } = useGenerateBlobPath({
+  ...options,
+  spikiness: 0.2,
+});
 
-console.log(mergedOptions.value) // Options merged with defaults
-console.log(dAttribute.value) // M124 ...
+console.log(mergedOptions.value); // Options merged with defaults
+console.log(path.value); // M124 ...
 
-refreshFn() // refreshes the dAttribute Ref<>
+refresh(); // refreshes the path Ref<>
 </script>
 ```
 
@@ -142,7 +160,7 @@ refreshFn() // refreshes the dAttribute Ref<>
 **Note:** this function is similar to `useGenerateBlobPath` in functionality, the difference is in the parameters.
 
 ```ts
-useGeneratePathString(polygon, smoothing)
+useGeneratePathString(polygon, smoothing);
 ```
 
 This function returns a `d` attribute of a random blob shape
@@ -151,13 +169,14 @@ Below is a code snippet using this composable:
 
 ```vue [YourComponent]
 <script lang="ts" setup>
-const { dAttribute, refreshFn } = useGenerateBlobPath(polygon, smoothingLevel)
+const { path, refresh } = useGeneratePathString(polygon, smoothingLevel);
 
-console.log(dAttribute.value) // M125 ...
+console.log(path.value); // M125 ...
 
-refreshFn() // refreshes the dAttribute Ref<>
+refresh(); // refreshes the path Ref<>
 </script>
 ```
+
 ::
 
 ::
@@ -171,6 +190,7 @@ Select a key from the options below to see details specific to such key
 ::UiTabs{:tabs='["componentName"]'}
 
 #tab-1
+
 ```ts [nuxt.config]
 export default defineNuxtConfig({
   uselessBlobs: {
@@ -179,8 +199,8 @@ export default defineNuxtConfig({
 });
 ```
 
-**Default:** `useless-blobs`
+**Default:** `useless-blob`
 
-This key allows you to set the prefix for the component registered by the module.
+This key allows you to set the name for the component registered by the module.
 
 ::
