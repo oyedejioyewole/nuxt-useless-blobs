@@ -9,7 +9,6 @@ export default defineAppConfig({
     footer: {
       content: 'Made with :heart: by [oyedejioyewole](https://github.com/oyedejioyewole)',
       iconLinks: {
-        'github-logo': 'https://github.com/oyedejioyewole',
         'svgl:nuxt': 'https://nuxt.com',
       },
     },
