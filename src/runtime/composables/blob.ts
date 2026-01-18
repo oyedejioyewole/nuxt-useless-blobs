@@ -1,8 +1,10 @@
 import type { ComputedRef, Ref } from '#imports'
 import { computed, useAsyncData, useId } from '#imports'
 import { defu } from 'defu'
-import generateBlobPath, { createPolygon, generatePathString } from 'useless-blobs'
+import generateBlobPath, * as blobUtils from 'useless-blobs'
 import type { CreateBlob, CreatePolygon, Point } from 'useless-blobs/lib/src/types'
+
+const { createPolygon, generatePathString } = blobUtils
 
 const DEFAULTS = { boundingShape: 'ellipsis', height: 200, irregularity: 0.25, smoothing: 1, spikiness: 0.5, verts: 6, width: 200 } satisfies CreateBlob
 
