@@ -1,10 +1,16 @@
 <script lang="ts" setup>
-import { useGenerateBlobPath } from '../composables/blob'
+import { useTemplateRef } from '#imports'
 import type { CreateBlob } from 'useless-blobs/lib/src/types'
+import { useGenerateBlobPath } from '../composables/blob'
 
 const { pathStyle, ...options } = defineProps<CreateBlob & { pathStyle?: string }>()
 
 const { mergedOptions, path } = useGenerateBlobPath(options)
+const pathElement = useTemplateRef('path-element')
+
+defineExpose({
+  pathElement,
+})
 </script>
 
 <template>
@@ -16,6 +22,7 @@ const { mergedOptions, path } = useGenerateBlobPath(options)
     <slot />
 
     <path
+      ref="path-element"
       :d="path"
       :style="pathStyle"
     />

@@ -29,7 +29,7 @@ export default defineNuxtModule<ModuleOptions>({
     })
 
     addImportsSources({
-      from: resolve('./runtime/composables/blob.ts'),
+      from: resolve('./runtime/composables/blob'),
       imports: ['useCreatePolygon', 'useGenerateBlobPath', 'useGeneratePathString'],
     })
 
